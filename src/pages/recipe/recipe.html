@@ -1,0 +1,19 @@
+<toolbar [title_page]='title_page' 
+        [loading]='loading.loading_page' 
+        [notificationsCount]='notificationsCount'></toolbar>
+
+<ion-content padding>
+
+  <ion-list style="margin-top: 55px;">
+    <ion-list-header>{{ recipe_name }}</ion-list-header>
+    <ion-item [@itemState]="in" *ngFor='let item of recipe_items'>
+      <ion-card>
+        <ion-card-content>
+        <span>{{ item.name }}</span>
+        <p>{{ item.summary }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

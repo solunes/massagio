@@ -1,0 +1,47 @@
+<toolbar [title_page]='title_page' 
+      [loading]='loading.loading_page' 
+      [notificationsCount]='notificationsCount'></toolbar>
+
+<ion-content padding style="margin-top: 55px;">
+	<img src="{{ pathForImage(lastImage) }}" style="width: 100%" [hidden]="true">
+
+  <ion-item>
+    <ion-label fixed>Amount</ion-label>
+    <ion-input type="number" name="amount" (input)="changeAmount()" [(ngModel)]="params.amount" required></ion-input>
+  </ion-item>
+
+  <ion-item full>
+    <ion-label fixed>Currency</ion-label>
+    <ion-select [(ngModel)]="params.currency" required>
+      <ion-option value="bob" checked="true">BOB</ion-option>
+      <ion-option value="usd">USD</ion-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Saldo: {{ saldo }}</ion-label>
+  </ion-item>
+  <ion-list class="margin_bottom">
+    <ion-list-header>Pagos</ion-list-header>
+    <ion-item [@itemState]="in" *ngFor="let payment_item of payment_array">
+      <ion-label>
+        <div>{{ payment_item.amount }} - {{ payment_item.name }}</div>
+        <div *ngIf="payment_item.saldo > 0" >Saldo: {{ payment_item.saldo }}</div>
+      </ion-label>
+      <ion-checkbox color="primary" [disabled]="payment_item.disabled" [(ngModel)]="payment_item.checked" (ionChange)="AddRemoveSelect(payment_item);"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <button ion-button icon-left (click)="presentActionSheet()">
+        <ion-icon name="camera"></ion-icon>Select Image
+      </button>
+      <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
+        <ion-icon name="cloud-upload"></ion-icon>Upload
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

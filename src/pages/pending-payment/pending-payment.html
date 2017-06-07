@@ -1,0 +1,15 @@
+<toolbar [title_page]='title_page' 
+        [loading]='loading.loading_page' 
+        [notificationsCount]='notificationsCount'></toolbar>
+
+<ion-content padding>
+
+  <ion-list class="top">
+    <ion-item [@itemState]="in" *ngFor='let pendingPayment of pendingPayments'>
+        <div>{{ pendingPayment.amount | number }} {{ pendingPayment.currency | mycurrency  }}</div>
+        <p>{{ pendingPayment.name }}</p>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

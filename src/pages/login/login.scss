@@ -1,0 +1,34 @@
+page-login {
+	.login-content{
+		ion-row{
+			align-items: center;
+		}
+		.logo-row{
+			padding-top: 50px;
+			padding-bottom: 20px;
+			ion-col{
+				text-align: center;
+			}
+		}
+		.login-box{
+		 	background: #399FCC;
+		 	padding: 20px 20px 0px 20px;
+		 	margin-top: 30px;
+		}
+		.signup-col{
+		 	margin: 0px 16px 0px 16px;
+		 	padding-bottom: 20px;
+		}
+		.item-inner {
+		 	border-bottom-color: map-get($colors, primary) !important;
+		 	box-shadow: none !important;
+		}
+		.submit-btn{
+		 	margin: 16px 0 4 0;
+		}
+		 .register-btn{
+		 	color: #ffffff;
+		 	font-size: 0.8em;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+<toolbar [title_page]='title_page' 
+        [loading]='loading.loading_page' 
+        [notificationsCount]='notificationsCount'></toolbar>
+
+<ion-content padding>
+
+  <ion-list style="margin-top: 55px;">
+    <ion-item [@itemState]="in" *ngFor='let article of articles'>
+      <ion-card>
+        <img src="{{article.image_thumb}}">
+        <ion-card-content [innerHTML]='article.description'>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

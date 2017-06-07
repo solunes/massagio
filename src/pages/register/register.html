@@ -1,0 +1,28 @@
+<ion-header class="header header-md">
+  <ion-navbar class="toolbar toolbar-md statusbar-padding">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list inset>
+    <form (ngSubmit)="registro()" #registerForm="ngForm">
+
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input type="name" name="name" [(ngModel)]="register.name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="register.email" required></ion-input>
+      </ion-item>
+
+      <button class="submit-btn" ion-button full type="submit" [disabled]="!registerForm.form.valid">Finalizar Registro</button>
+    </form>
+
+  </ion-list>
+</ion-content>

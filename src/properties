@@ -1,0 +1,6 @@
+class Properties {
+    public JSON<any>{
+        api_url: 'asdsad',
+        asdasd: 'asda',
+    }    
+}
