@@ -11,6 +11,7 @@ import { PackagePage } from '../pages/package/package';
 import { RegisterPage } from '../pages/register/register';
 import { EventPage } from '../pages/event/event';
 import { ProfilePage } from '../pages/profile/profile';
+import { ServicioPage } from '../pages/servicio/servicio';
 
 /*
   Generated class for the AppRouter provider.
@@ -64,8 +65,8 @@ export class AppRouter {
             data: { title: 'Paquetes' }
           },
           {
-            path: 'pending-payment', component: PendingPaymentPage, 
-            data: { title: 'Pagos Pendientes' }
+            path: 'servicio', component: ServicioPage,
+            data: { title: 'Servicios' }
           },
           {
             path: 'profile', component: ProfilePage,

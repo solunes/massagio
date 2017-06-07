@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler, LOCALE_ID } from '@angular/core';
 import { IonicStorageModule } from '@ionic/storage';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+import { NgCalendarModule  } from 'ionic2-calendar';
 import { MyApp } from './app.component';
 import { ToolbarComponent } from './toolbar.component';
 
@@ -10,13 +11,14 @@ import { LoginPage } from '../pages/login/login';
 import { PendingPaymentPage } from '../pages/pending-payment/pending-payment';
 import { NotificationPage } from '../pages/notification/notification';
 import { RegisterPaymentPage } from '../pages/register-payment/register-payment';
-import { RecipePage } from '../pages/recipe/recipe';
 import { RegisterPage } from '../pages/register/register';
 import { EventPage } from '../pages/event/event';
 import { ProfilePage } from '../pages/profile/profile';
 import { ReservePage } from '../pages/reserve/reserve';
 import { PackagePage } from '../pages/package/package';
 import { CalendarPage } from '../pages/calendar/calendar';
+import { ServicioPage } from '../pages/servicio/servicio';
+import { DetailServicioPage } from '../pages/detail-servicio/detail-servicio';
 
 import { AppRouter } from '../providers/app-router';
 import { AppSettings } from '../providers/app-settings';
@@ -54,17 +56,19 @@ const cloudSettings: CloudSettings = {
     PendingPaymentPage,
     NotificationPage,
     RegisterPaymentPage,
-    RecipePage,
     EventPage,
     ProfilePage,
     RegisterPage,
     ReservePage,
     PackagePage,
     CalendarPage,
+    ServicioPage,
+    DetailServicioPage,
     Currency,
     Hightlight
   ],
   imports: [
+    NgCalendarModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     CloudModule.forRoot(cloudSettings)
@@ -78,13 +82,14 @@ const cloudSettings: CloudSettings = {
     PendingPaymentPage,
     NotificationPage,
     RegisterPaymentPage,
-    RecipePage,
     EventPage,
     ProfilePage,
     RegisterPage,
     ReservePage,
+    DetailServicioPage,
     PackagePage,
-    CalendarPage
+    CalendarPage,
+    ServicioPage
   ],
   providers: [
     AuthService,

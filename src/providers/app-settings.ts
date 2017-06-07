@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
 const CONFIG = {
-	apiUrl: 'http://spazio.solunes.com/api'
+	apiUrl: 'http://massaggio.solunes.com/api'
 };
 
 @Injectable()

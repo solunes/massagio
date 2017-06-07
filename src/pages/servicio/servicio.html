@@ -1,0 +1,18 @@
+<toolbar [title_page]='title_page' 
+        [loading]='loading.loading_page' 
+        [notificationsCount]='notificationsCount'></toolbar>
+
+<ion-content padding>
+  <ion-list style="margin-top: 55px;">
+    <ion-item [@itemState]="in" (click)='calendar(service)' *ngFor='let service of services'>
+      <ion-card>
+        <img src="{{service.image}}">
+        <ion-card-content >
+          <div>{{ service.name }}</div>
+          <div>{{ service.duration }} - {{ service.price }}</div>
+          <p [innerHTML]='service.summary'></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

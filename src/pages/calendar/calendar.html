@@ -1,18 +1,20 @@
-<!--
-  Generated template for the Calendar page.
+<toolbar [title_page]='title_page' 
+        [loading]='loading.loading_page' 
+        [notificationsCount]='notificationsCount'></toolbar>
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>calendar</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content padding style="margin-top: 55px;">
+  <div style="height: 350px;">
+  <calendar [eventSource]="eventSource"
+    [calendarMode]="calendar.mode"
+    [currentDate]="calendar.currentDate"
+    (onCurrentDateChanged)="onCurrentDateChanged($event)"
+    (onRangeChanged)="reloadSource(startTime, endTime)"
+    (onEventSelected)="onEventSelected($event)"
+    (onTitleChanged)="onViewTitleChanged($event)"
+    (onTimeSelected)="onTimeSelected($event)"
+    [noEventsLabel]="events_label"
+    step="30" style="height: 350px;">
+  </calendar>
+  </div>
+  <div>some</div>
 </ion-content>

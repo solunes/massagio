@@ -11,7 +11,7 @@ import { AuthService } from '../providers/auth-service';
 import { LoginPage } from '../pages/login/login';
 import { NotificationPage } from '../pages/notification/notification';
 import { HomePage } from '../pages/home/home';
-import { RecipePage } from '../pages/recipe/recipe';
+import { ServicioPage } from '../pages/servicio/servicio';
 
 import { AppRouter } from '../providers/app-router';
 
@@ -34,7 +34,7 @@ export class MyApp {
       Splashscreen.hide();
       this.storage.get(AuthService.login_key).then(value => {
         if(value) {
-          this.rootPage = RecipePage;
+          this.rootPage = ServicioPage;
           console.log('home');
         } else {
           this.rootPage = LoginPage;
