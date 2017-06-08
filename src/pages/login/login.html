@@ -1,20 +1,19 @@
 <ion-content class="login-content" padding>
-  <ion-row class="logo-row">
-    <ion-col>
-      <img src="assets/icon/solunes_logo.png">
-    </ion-col>
-  </ion-row>
-  <ion-list inset>
-    <form (ngSubmit)="checkLogin()" #registerForm="ngForm">
-
-        <ion-item>
-          <ion-label floating>Usuario</ion-label>
-          <ion-input type="user" name="user" [(ngModel)]="registerCredentials.user" required></ion-input>
-        </ion-item>
-
-      <button class="submit-btn" ion-button full type="submit" [disabled]="!registerForm.form.valid">Login</button>
-    </form>
-
-    <button class="submit-btn" color='danger' (click)='registro()' ion-button full type="submit">Registro</button>
-  </ion-list>
+  <ion-card style="margin-top: 100px;">
+    <ion-row class="logo-row">
+      <ion-col>
+        <img src="assets/icon/logo.png">
+      </ion-col>
+    </ion-row>
+    <ion-list inset>
+      <form (ngSubmit)="checkLogin()" #registerForm="ngForm">
+          <ion-item>
+            <ion-label floating>Código de Cliente</ion-label>
+            <ion-input type="user" name="user" [(ngModel)]="registerCredentials.user" required></ion-input>
+          </ion-item>
+        <button class="submit-btn" ion-button full type="submit">Iniciar Sesión</button>
+      </form>
+      <button class="submit-btn" color='secondary' (click)='registro()' ion-button full type="submit">Registro de Cliente</button>
+    </ion-list>
+  </ion-card>
 </ion-content>

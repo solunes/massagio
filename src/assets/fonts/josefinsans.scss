@@ -1,0 +1,27 @@
+// Roboto Font
+// Google
+// Apache License, version 2.0
+// http://www.apache.org/licenses/LICENSE-2.0.html
+
+$josefin-font-path: $font-path !default;
+
+@font-face {
+  font-family: "josefin";
+  font-style: normal;
+  font-weight: 300;
+  src: local("josefin_sanslight"), local("josefin_sanslight"), url("#{$josefin-font-path}/josefinsans-light-webfont.woff2") format("woff2"), url("#{$josefin-font-path}/josefinsans-light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "josefin";
+  font-style: normal;
+  font-weight: 400;
+  src: local("josefin_sansregular"), local("josefin_sansregular"), url("#{$josefin-font-path}/josefinsans-regular-webfont.woff2") format("woff2"), url("#{$josefin-font-path}/josefinsans-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "josefin";
+  font-style: normal;
+  font-weight: 700;
+  src: local("josefin_sansbold"), local("josefin_sansbold"), url("#{$josefin-font-path}/josefinsans-bold-webfont.woff2") format("woff2"), url("#{$josefin-font-path}/josefinsans-bold-webfont.woff") format("woff");
+}

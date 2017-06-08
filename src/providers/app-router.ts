@@ -61,7 +61,7 @@ export class AppRouter {
             data: { title: 'Eventos' }
           },
           {
-            path: 'package', component: PackagePage,
+            path: 'package', component: ServicioPage,
             data: { title: 'Paquetes' }
           },
           {

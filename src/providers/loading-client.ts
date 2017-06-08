@@ -25,7 +25,7 @@ export class LoadingClient {
             this.loading_page = true
           } else {
             this.loading = this.loadingCtrl.create({
-                content: "Please wait..."
+                content: "Por favor espere..."
             });
             this.is_present = true
 			this.loading.present();

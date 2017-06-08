@@ -4,9 +4,23 @@
 
 
 <ion-content padding style="margin-top: 55px;">
-
-  <h4>{{ profile.name }}</h4>
-  <div>{{ profile.email }}</div>
-  <p>{{ profile.rank }}</p>
-
+	<ion-card>
+		<ion-card-content>
+		  <h2>{{ profile.name }}</h2>
+		  <p><strong>Email:</strong> {{ profile.email }}</p>
+		  <p><strong>Dirección:</strong> Calacoto, Av. Ballivián Edificio Rooser Sur 7A</p>
+		  <p><strong>Teléfono:</strong> 70554450</p>
+		  <p><strong>Altura:</strong> 1.80 mts</p>
+		  <p><strong>Peso:</strong> 70 kg</p>
+    	  <button class="submit-btn" color='primary' ion-button full type="submit">Editar Perfil</button>
+		</ion-card-content>
+	</ion-card>
+	<ion-card>
+		<ion-card-content>
+		  <h2>Mis Reservas</h2>
+		  <h3>18/06/2017 - 20:00 a 21:00</h3>
+		  <p><strong>Servicio de muestra:</strong> Realizado por Carolina Reyes.</p>
+    	  <button class="submit-btn" color='primary' ion-button full type="submit">Abrir Reserva</button>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

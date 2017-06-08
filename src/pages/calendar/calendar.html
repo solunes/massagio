@@ -3,18 +3,22 @@
         [notificationsCount]='notificationsCount'></toolbar>
 
 <ion-content padding style="margin-top: 55px;">
-  <div style="height: 350px;">
-  <calendar [eventSource]="eventSource"
-    [calendarMode]="calendar.mode"
-    [currentDate]="calendar.currentDate"
-    (onCurrentDateChanged)="onCurrentDateChanged($event)"
-    (onRangeChanged)="reloadSource(startTime, endTime)"
-    (onEventSelected)="onEventSelected($event)"
-    (onTitleChanged)="onViewTitleChanged($event)"
-    (onTimeSelected)="onTimeSelected($event)"
-    [noEventsLabel]="events_label"
-    step="30" style="height: 350px;">
-  </calendar>
-  </div>
-  <div>some</div>
+  <ion-card>
+    <ion-list inset>
+      <h1>Seleccione una Fecha/Hora</h1>
+    </ion-list>
+    <div style="height: 550px;">
+      <calendar [eventSource]="eventSource"
+        [calendarMode]="calendar.mode"
+        [currentDate]="calendar.currentDate"
+        (onCurrentDateChanged)="onCurrentDateChanged($event)"
+        (onRangeChanged)="reloadSource(startTime, endTime)"
+        (onEventSelected)="onEventSelected($event)"
+        (onTitleChanged)="onViewTitleChanged($event)"
+        (onTimeSelected)="onTimeSelected($event)"
+        [noEventsLabel]="events_label"
+        step="30" style="height: 550px;">
+      </calendar>
+    </div>
+  </ion-card>
 </ion-content>

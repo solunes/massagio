@@ -8,21 +8,43 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list inset>
-    <form (ngSubmit)="registro()" #registerForm="ngForm">
+  <ion-card style="margin-top: 50px;">
+    <ion-list inset>
+      <form (ngSubmit)="registro()" #registerForm="ngForm">
 
-      <ion-item>
-        <ion-label floating>Nombre</ion-label>
-        <ion-input type="name" name="name" [(ngModel)]="register.name" required></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label floating>Nombre</ion-label>
+          <ion-input type="name" name="name" [(ngModel)]="register.name" required></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label floating>Email</ion-label>
-        <ion-input type="email" name="email" [(ngModel)]="register.email" required></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" name="email" [(ngModel)]="register.email" required></ion-input>
+        </ion-item>
 
-      <button class="submit-btn" ion-button full type="submit" [disabled]="!registerForm.form.valid">Finalizar Registro</button>
-    </form>
+        <ion-item>
+          <ion-label floating>Ciudad</ion-label>
+          <ion-input type="city" name="city" [(ngModel)]="register.city" required></ion-input>
+        </ion-item>
 
-  </ion-list>
+        <ion-item>
+          <ion-label floating>Zona</ion-label>
+          <ion-input type="zone" name="zone" [(ngModel)]="register.zone" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Dirección</ion-label>
+          <ion-input type="address" name="address" [(ngModel)]="register.address" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Teléfono</ion-label>
+          <ion-input type="phone" name="phone" [(ngModel)]="register.phone" required></ion-input>
+        </ion-item>
+
+        <button class="submit-btn" ion-button full type="submit" [disabled]="!registerForm.form.valid">Finalizar Registro</button>
+      </form>
+
+    </ion-list>
+  </ion-card>
 </ion-content>
